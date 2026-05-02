@@ -1,0 +1,9 @@
+node_modules/
+dist/
+*.local
+.DS_Store
+public/wust-logo.png
+cleanup.py
+apply_fonts.py
+fix_fonts.py
+font_system.py
