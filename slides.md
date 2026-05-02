@@ -114,8 +114,8 @@ fonts:
 <v-click><div style="padding:0.5rem 0;"><span style="display:inline-block;width:26px;height:26px;background:#7c3aed;color:white;border-radius:50%;text-align:center;line-height:26px;font-weight:700;margin-right:0.6rem;">3</span><span >对迭代过程进行控制</span></div></v-click>
 <v-click>
 <div style="padding:0.5rem 0 0 2rem;color:#666;">
-• 固定次数结束<br>
-• 特定条件结束（精度达标）
+1.固定次数结束<br>
+2.特定条件结束
 </div>
 </v-click>
 
@@ -130,53 +130,44 @@ fonts:
 
 <div style="padding-top:0.5rem;font-size:1.3rem;">
 
-## 兔子繁殖问题
+## 例1：兔子繁殖问题
 
 <div style="display:flex;flex-direction:column;align-items:center;text-align:center;margin-top:2rem;">
 
 <v-click>
 
-<div style="padding:0.8rem 1.5rem;background:#f8f6ff;border-radius:12px;border-left:4px solid #7c3aed;margin-bottom:0.6rem;max-width:92%;">
-一对兔子从出生后第三个月开始，每月生一对小兔子。假若兔子只生不死，一月份抱来一对刚出生的小兔子，问一年中每个月各有多少只兔子。
+<div style="padding:0.8rem 1.5rem;background:#f8f6ff;border-radius:12px;border-left:4px solid #7c3aed;margin-bottom:0.6rem;max-width:92%;font-size:1.1rem;">
+一对兔子从出生后第三个月开始，每月生一对小兔子。小兔子到第三个月又开始生下一代小兔子。假若兔子只生不死，一月份抱来一对刚出生的小兔子，问一年中每个月各有多少只兔子。
 </div>
 
 </v-click>
 
 <v-click>
 
-<table style="border-collapse:collapse;margin:0 auto 6px auto;">
-<tr><th style="padding:3px 6px;border:1px solid #ddd;background:#f3f0ff;">月份</th><td style="padding:3px 6px;border:1px solid #ddd;text-align:center;">1月</td><td style="padding:3px 6px;border:1px solid #ddd;text-align:center;">2月</td><td style="padding:3px 6px;border:1px solid #ddd;text-align:center;">3月</td><td style="padding:3px 6px;border:1px solid #ddd;text-align:center;">4月</td><td style="padding:3px 6px;border:1px solid #ddd;text-align:center;">5月</td><td style="padding:3px 6px;border:1px solid #ddd;text-align:center;">6月</td></tr>
-<tr><th style="padding:3px 6px;border:1px solid #ddd;background:#f3f0ff;">数量</th><td style="padding:3px 6px;border:1px solid #ddd;text-align:center;">1</td><td style="padding:3px 6px;border:1px solid #ddd;text-align:center;">1</td><td style="padding:3px 6px;border:1px solid #ddd;text-align:center;">2</td><td style="padding:3px 6px;border:1px solid #ddd;text-align:center;">3</td><td style="padding:3px 6px;border:1px solid #ddd;text-align:center;">5</td><td style="padding:3px 6px;border:1px solid #ddd;text-align:center;">8</td></tr>
-</table>
-
-</v-click>
-
-<v-click>
-
-<table style="border-collapse:collapse;margin:0 auto 6px auto;">
-<tr><th style="padding:3px 6px;border:1px solid #ddd;background:#f3f0ff;">月份</th><td style="padding:3px 6px;border:1px solid #ddd;text-align:center;">7月</td><td style="padding:3px 6px;border:1px solid #ddd;text-align:center;">8月</td><td style="padding:3px 6px;border:1px solid #ddd;text-align:center;">9月</td><td style="padding:3px 6px;border:1px solid #ddd;text-align:center;">10月</td><td style="padding:3px 6px;border:1px solid #ddd;text-align:center;">11月</td><td style="padding:3px 6px;border:1px solid #ddd;text-align:center;">12月</td></tr>
-<tr><th style="padding:3px 6px;border:1px solid #ddd;background:#f3f0ff;">数量</th><td style="padding:3px 6px;border:1px solid #ddd;text-align:center;">13</td><td style="padding:3px 6px;border:1px solid #ddd;text-align:center;">21</td><td style="padding:3px 6px;border:1px solid #ddd;text-align:center;">34</td><td style="padding:3px 6px;border:1px solid #ddd;text-align:center;">55</td><td style="padding:3px 6px;border:1px solid #ddd;text-align:center;">89</td><td style="padding:3px 6px;border:1px solid #ddd;text-align:center;">144</td></tr>
-</table>
-
-</v-click>
-
-<v-click>
-
-<div style="padding:0.5rem 1.2rem;background:#fafafa;border-radius:8px;margin-bottom:0.3rem;max-width:92%;">
-
-**算法设计思路：** $y_1 = y_2 = 1,\; y_n = y_{n-1} + y_{n-2}$
-
+<div style="margin-bottom:0.5rem;font-size:0.9rem;line-height:1.8;">
+月份：1月 &emsp;&emsp; 2月 &emsp;&emsp; 3月 &emsp;&emsp;&emsp; 4月 &emsp;&emsp;&emsp; 5月<br>
+数量：1 &emsp;&emsp;&emsp; 1 &emsp;&emsp;&emsp; 1+1=2 &emsp;&emsp; 2+1=3 &emsp;&emsp; 3+2=5
 </div>
 
 </v-click>
 
 <v-click>
 
-<div style="padding:0.5rem 1.2rem;background:#fafafa;border-radius:8px;max-width:92%;">
+**算法设计思路：**
 
-**数据结构设计：** 数组存储（保留全部） ↔ 变量滚动更新（仅前两月）
+</v-click>
 
-</div>
+<v-click>
+
+1） **数学模型：** $y_1 = y_2 = 1,\; y_n = y_{n-1} + y_{n-2},\; n=3,4,\cdots$
+
+</v-click>
+
+<v-click>
+
+2） **数据结构设计：**<br>
+&emsp;使用数组存储 $y_n$<br>
+&emsp;使用变量存储 $y_n$
 
 </v-click>
 
@@ -316,23 +307,22 @@ $$c = a \bmod b,\quad a = b,\quad b = c$$
 
 ## 最大公约数 — 完整代码
 
-```c
-int gcd(int a, int b) {
-    int c;
-    if (b == 0) return -1;
-    c = a % b;
-    while (c != 0) {
-        a = b;
-        b = c;
-        c = a % b;
-    }
-    return b;
-}
-
-int main() {
-    printf("gcd(18,12) = %d\n", gcd(18, 12));
-    printf("gcd(100,35) = %d\n", gcd(100, 35));
-    return 0;
+```
+main()
+{ int a, b;
+  input(a,b);
+  if(b=0)
+  {   print("data error");
+  return;
+  }
+  else
+  {    c = a mod b;
+  while c<>0
+  {   a=b;b=c;
+  c=a mod b;
+  }
+  }
+  print(b);
 }
 ```
 
@@ -423,9 +413,9 @@ printf("原有 %d 个桃子\n", peach);
 </div>
 ---
 
-<div style="padding-top:1.8rem;font-size:1.3rem;">
+<div style="padding-top:0.3rem;font-size:1.2rem;">
 
-## 杨辉三角形（一维数组）
+## 例2：杨辉三角形输出（用1维数组完成）
 
 <v-click>
 
@@ -437,32 +427,28 @@ printf("原有 %d 个桃子\n", peach);
    1 4 6 4 1
 ```
 
+**递推公式：** $A[i][j] = A[i-1][j-1] + A[i-1][j]$
+
 </v-click>
 
 <v-click>
 
 **算法设计思路：**
-
-1） 一维数组 $A[1..i]$ 存储第 $i$ 行
-
-</v-click>
-
-<v-click>
-
-2） 只用一维数组，正推法将会覆盖上一行对应的值，不能求下一个值
+1）一维数组 $A[1..i]$ 存储第 $i$ 行
+2）正推法将会覆盖上一行对应的值，不能求下一个值
+3）<span class="highlight">反推法</span>可以避免覆盖
 
 </v-click>
 
 <v-click>
 
-3) <span class="highlight">反推法</span>可以避免覆盖
+**正推公式：**
+$$A[1] = A[i] = 1$$
+$$A[j] = A[j-1] + A[j],\quad j=2,3,\cdots,i-1$$
 
-</v-click>
-
-<v-click>
-
-**递推公式：**
-$$A[i][j] = A[i-1][j-1] + A[i-1][j]$$
+**反推公式（从右向左）：**
+$$A[1] = A[i] = 1$$
+$$A[j] = A[j-1] + A[j],\quad j=i-1,i-2,\cdots,2$$
 
 </v-click>
 
@@ -549,7 +535,7 @@ for (int j = i - 1; j > 1; j--)     // 从右向左倒推
 
 <div style="padding-top:0.5rem;font-size:1.3rem;">
 
-## 穿越沙漠问题
+## 例3：穿越沙漠问题
 
 <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;margin-top:2rem;">
 
